@@ -1,0 +1,40 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/conso4s-web-api/src",
+  "monorepo": true,
+  "root": "apps/conso4s-web-api",
+  "compilerOptions": {
+    "webpack": false,
+    "tsConfigPath": "apps/conso4s-web-api/tsconfig.app.json"
+  },
+  "projects": {
+    "conso4s-web-api": {
+      "type": "application",
+      "root": "apps/conso4s-web-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/conso4s-web-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/conso4s-web-api/tsconfig.app.json"
+      }
+    },
+    "conso4s-core": {
+      "type": "application",
+      "root": "apps/conso4s-core",
+      "entryFile": "main",
+      "sourceRoot": "apps/conso4s-core/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/conso4s-core/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  },
+  "watchAssets": true
+}
